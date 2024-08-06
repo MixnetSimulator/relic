@@ -78,7 +78,7 @@ ull_t arch_cycles(void) {
 #elif TIMER == PERF
 
 ull_t arch_cycles(void) {
-	uint_t seq;
+	relic_uint_t seq;
 	ull_t index, offset, result = 0;
 	if (core_get()->perf_buf != NULL) {
 		do {
@@ -100,6 +100,6 @@ ull_t arch_cycles(void) {
 }
 #endif
 
-uint_t arch_lzcnt(dig_t x) {
+relic_uint_t arch_lzcnt(dig_t x) {
 	return core_get()->lzcnt_ptr((ull_t)x) - (8 * sizeof(ull_t) - WSIZE);
 }

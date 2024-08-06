@@ -151,7 +151,7 @@ int util_cmp_sec(const void *a, const void *b, size_t size) {
 	return (result == 0 ? RLC_EQ : RLC_NE);
 }
 
-void util_perm(uint_t p[], size_t n) {
+void util_perm(relic_uint_t p[], size_t n) {
 	size_t i, j, k;
 
 	for (i = 0; i < n; i++) {

@@ -106,7 +106,7 @@ int bn_is_even(const bn_t a) {
 }
 
 size_t bn_bits(const bn_t a) {
-	uint_t bits;
+	relic_uint_t bits;
 
 	if (bn_is_zero(a)) {
 		return 0;
@@ -118,7 +118,7 @@ size_t bn_bits(const bn_t a) {
 	return bits + util_bits_dig(a->dp[a->used - 1]);
 }
 
-int bn_get_bit(const bn_t a, uint_t bit) {
+int bn_get_bit(const bn_t a, relic_uint_t bit) {
 	int d;
 
 	if (bit > bn_bits(a)) {
@@ -134,7 +134,7 @@ int bn_get_bit(const bn_t a, uint_t bit) {
 	}
 }
 
-void bn_set_bit(bn_t a, uint_t bit, int value) {
+void bn_set_bit(bn_t a, relic_uint_t bit, int value) {
 	int d;
 
 	RLC_RIP(bit, d, bit);
@@ -152,7 +152,7 @@ void bn_set_bit(bn_t a, uint_t bit, int value) {
 	}
 }
 
-uint_t bn_ham(const bn_t a) {
+relic_uint_t bn_ham(const bn_t a) {
 	int c = 0;
 
 	for (int i = 0; i < bn_bits(a); i++) {
@@ -254,7 +254,7 @@ void bn_print(const bn_t a) {
 	}
 }
 
-size_t bn_size_str(const bn_t a, uint_t radix) {
+size_t bn_size_str(const bn_t a, relic_uint_t radix) {
 	size_t digits = 0;
 	bn_t t;
 
@@ -298,7 +298,7 @@ size_t bn_size_str(const bn_t a, uint_t radix) {
 	return digits + 1;
 }
 
-void bn_read_str(bn_t a, const char *str, size_t len, uint_t radix) {
+void bn_read_str(bn_t a, const char *str, size_t len, relic_uint_t radix) {
 	int sign, i, j;
 	char c;
 
@@ -347,7 +347,7 @@ void bn_read_str(bn_t a, const char *str, size_t len, uint_t radix) {
 	}
 }
 
-void bn_write_str(char *str, size_t len, const bn_t a, uint_t radix) {
+void bn_write_str(char *str, size_t len, const bn_t a, relic_uint_t radix) {
 	bn_t t;
 	dig_t d;
 	int l, i, j;

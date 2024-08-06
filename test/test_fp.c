@@ -62,7 +62,7 @@ static int memory(void) {
 }
 
 static int util(void) {
-	uint_t bits;
+	relic_uint_t bits;
 	int code = RLC_ERR;
 	/* Allocate two extra for sign and null terminator. */
 	char str[RLC_FP_BITS + 2];

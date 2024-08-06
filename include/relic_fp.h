@@ -709,7 +709,7 @@ int fp_is_even(const fp_t a);
  * @param[in] bit			- the bit position.
  * @return the bit value.
  */
-int fp_get_bit(const fp_t a, uint_t bit);
+int fp_get_bit(const fp_t a, relic_uint_t bit);
 
 /**
  * Stores a bit in a given position on a prime field element.
@@ -718,7 +718,7 @@ int fp_get_bit(const fp_t a, uint_t bit);
  * @param[in] bit			- the bit position.
  * @param[in] value			- the bit value.
  */
-void fp_set_bit(fp_t a, uint_t bit, int value);
+void fp_set_bit(fp_t a, relic_uint_t bit, int value);
 
 /**
  * Assigns a small positive constant to a prime field element.
@@ -770,7 +770,7 @@ void fp_print(const fp_t a);
  * @throw ERR_NO_VALID		- if the radix is invalid.
  * @return the number of digits in the given radix.
  */
-size_t fp_size_str(const fp_t a, uint_t radix);
+size_t fp_size_str(const fp_t a, relic_uint_t radix);
 
 /**
  * Reads a prime field element from a string in a given radix. The radix must
@@ -782,7 +782,7 @@ size_t fp_size_str(const fp_t a, uint_t radix);
  * @param[in] radix			- the radix.
  * @throw ERR_NO_VALID		- if the radix is invalid.
  */
-void fp_read_str(fp_t a, const char *str, size_t len, uint_t radix);
+void fp_read_str(fp_t a, const char *str, size_t len, relic_uint_t radix);
 
 /**
  * Writes a prime field element to a string in a given radix. The radix must
@@ -795,7 +795,7 @@ void fp_read_str(fp_t a, const char *str, size_t len, uint_t radix);
  * @throw ERR_BUFFER		- if the buffer capacity is insufficient.
  * @throw ERR_NO_VALID		- if the radix is invalid.
  */
-void fp_write_str(char *str, size_t len, const fp_t a, uint_t radix);
+void fp_write_str(char *str, size_t len, const fp_t a, relic_uint_t radix);
 
 /**
  * Reads a prime field element from a byte vector in big-endian format.
@@ -1028,7 +1028,7 @@ void fp_sqr_karat(fp_t c, const fp_t a);
  * @param[in] a				- the prime field element to shift.
  * @param[in] bits			- the number of bits to shift.
  */
-void fp_lsh(fp_t c, const fp_t a, uint_t bits);
+void fp_lsh(fp_t c, const fp_t a, relic_uint_t bits);
 
 /**
  * Shifts a prime field element to the right. Computes c = floor(a / 2^bits).
@@ -1037,7 +1037,7 @@ void fp_lsh(fp_t c, const fp_t a, uint_t bits);
  * @param[in] a				- the prime field element to shift.
  * @param[in] bits			- the number of bits to shift.
  */
-void fp_rsh(fp_t c, const fp_t a, uint_t bits);
+void fp_rsh(fp_t c, const fp_t a, relic_uint_t bits);
 
 /**
  * Reduces a multiplication result modulo the prime field modulo using

@@ -43,9 +43,9 @@
 	 * Addresses of the registers.
 	 */
  	/** @{ */
-	volatile uint_t *DWT_CYCCNT = (uint_t *)0xE0001004;
-	volatile uint_t *DWT_CONTROL = (uint_t *)0xE0001000;
-	volatile uint_t *SCB_DEMCR = (uint_t *)0xE000EDFC;
+	volatile relic_uint_t *DWT_CYCCNT = (relic_uint_t *)0xE0001004;
+	volatile relic_uint_t *DWT_CONTROL = (relic_uint_t *)0xE0001000;
+	volatile relic_uint_t *SCB_DEMCR = (relic_uint_t *)0xE000EDFC;
 	/** @} */
 #endif
 
@@ -85,7 +85,7 @@ void arch_clean(void) {
 
 
 ull_t arch_cycles(void) {
-	uint_t value = 0;
+	relic_uint_t value = 0;
 
 #if TIMER == CYCLE
 
@@ -104,7 +104,7 @@ ull_t arch_cycles(void) {
 	return value;
 }
 
-uint_t arch_lzcnt(uint_t x) {
+relic_uint_t arch_lzcnt(relic_uint_t x) {
 #ifdef WSIZE == 32
 	return lzcnt32_gcc_arm(x);
 #elif WSIZE == 64

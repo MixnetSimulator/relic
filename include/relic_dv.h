@@ -231,7 +231,7 @@ void dv_free_dynam(dv_t *a);
  * @param[in] size			- the number of digits to shift.
  * @param[in] digits		- the shift amount.
  */
-void dv_lshd(dig_t *c, const dig_t *a, size_t size, uint_t digits);
+void dv_lshd(dig_t *c, const dig_t *a, size_t size, relic_uint_t digits);
 
 /**
  * Shifts a digit vector to the right by some digits.
@@ -242,6 +242,6 @@ void dv_lshd(dig_t *c, const dig_t *a, size_t size, uint_t digits);
  * @param[in] size			- the number of digits to shift.
  * @param[in] digits		- the shift amount.
  */
-void dv_rshd(dig_t *c, const dig_t *a, size_t size, uint_t digits);
+void dv_rshd(dig_t *c, const dig_t *a, size_t size, relic_uint_t digits);
 
 #endif /* !RLC_DV_H */

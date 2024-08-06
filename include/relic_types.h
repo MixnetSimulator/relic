@@ -166,7 +166,7 @@ typedef unsigned long long ull_t;
 /*
  * Represents the unsigned integer with maximum precision.
  */
-typedef unsigned long uint_t;
+typedef unsigned int relic_uint_t;
 
 /*============================================================================*/
 /* Macro definitions                                                          */

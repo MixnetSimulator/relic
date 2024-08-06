@@ -303,7 +303,7 @@ int util_cmp_sec(const void *a, const void *b, size_t n);
  * @param[out] p 			- the resulting permutation.
  * @param[in] n 			- the size of the permutation.
  */
-void util_perm(uint_t p[], size_t n);
+void util_perm(relic_uint_t p[], size_t n);
 
 /**
  * Formats and prints data following a printf-like syntax.

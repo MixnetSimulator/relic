@@ -45,7 +45,7 @@
  * @param[in] radix				- the radix to check.
  * @return if radix is a valid radix.
  */
-static int valid_radix(uint_t radix) {
+static int valid_radix(relic_uint_t radix) {
 	while (radix > 0) {
 		if (radix != 1 && radix % 2 == 1)
 			return 0;
@@ -60,7 +60,7 @@ static int valid_radix(uint_t radix) {
  * @param[in] radix				- the valid radix.
  * @return the logarithm of the radix in basis two.
  */
-static int log_radix(uint_t radix) {
+static int log_radix(relic_uint_t radix) {
 	int l = 0;
 
 	while (radix > 0) {
@@ -93,7 +93,7 @@ int fb_is_zero(const fb_t a) {
 	return !t;
 }
 
-int fb_get_bit(const fb_t a, uint_t bit) {
+int fb_get_bit(const fb_t a, relic_uint_t bit) {
 	int d;
 
 	RLC_RIP(bit, d, bit);
@@ -101,7 +101,7 @@ int fb_get_bit(const fb_t a, uint_t bit) {
 	return (a[d] >> bit) & 1;
 }
 
-void fb_set_bit(fb_t a, uint_t bit, int value) {
+void fb_set_bit(fb_t a, relic_uint_t bit, int value) {
 	int d;
 	dig_t mask;
 
@@ -154,7 +154,7 @@ void fb_print(const fb_t a) {
 	util_print("\n");
 }
 
-size_t fb_size_str(const fb_t a, uint_t radix) {
+size_t fb_size_str(const fb_t a, relic_uint_t radix) {
 	bn_t t;
 	size_t digits = 0;
 
@@ -182,7 +182,7 @@ size_t fb_size_str(const fb_t a, uint_t radix) {
 	return digits;
 }
 
-void fb_read_str(fb_t a, const char *str, size_t len, uint_t radix) {
+void fb_read_str(fb_t a, const char *str, size_t len, relic_uint_t radix) {
 	bn_t t;
 
 	bn_null(t);
@@ -211,7 +211,7 @@ void fb_read_str(fb_t a, const char *str, size_t len, uint_t radix) {
 	}
 }
 
-void fb_write_str(char *str, size_t len, const fb_t a, uint_t radix) {
+void fb_write_str(char *str, size_t len, const fb_t a, relic_uint_t radix) {
 	fb_t t;
 	int d, l, i, j;
 	char c;

@@ -119,7 +119,7 @@ void bn_muln_low(dig_t *c, const dig_t *a, const dig_t *b, size_t size) {
 }
 
 void bn_muld_low(dig_t *c, const dig_t *a, size_t sa, const dig_t *b, size_t sb,
-		uint_t l, uint_t h) {
+		relic_uint_t l, relic_uint_t h) {
 	int i, j, ta;
 	const dig_t *tmpa, *tmpb;
 	dig_t r0, r1, r2;

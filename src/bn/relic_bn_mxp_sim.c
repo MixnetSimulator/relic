@@ -119,7 +119,7 @@ void bn_mxp_sim_few(bn_t c, const bn_t *a, const bn_t *b, const bn_t m,
 #endif
         for (size_t i = 0; i < n; i++) {
             if (!bn_is_zero(b[i])) { // Otherwise will never need P[i]
-				const uint_t star = 1 << i;
+				const relic_uint_t star = 1 << i;
 #if BN_MOD == MONTY
 				bn_mod_monty_conv(t[star], a[i], m);
 #else
@@ -169,7 +169,7 @@ void bn_mxp_sim_few(bn_t c, const bn_t *a, const bn_t *b, const bn_t m,
 }
 
 void bn_mxp_sim_lot(bn_t c, const bn_t *a, const bn_t *b, const bn_t m, size_t n) {
-	uint_t i, j;
+	relic_uint_t i, j;
     bn_t _a[XP_WIDTH], _b[XP_WIDTH], t;
 
 	if (bn_cmp_dig(m, 1) == RLC_EQ) {

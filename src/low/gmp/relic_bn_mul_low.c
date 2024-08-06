@@ -68,7 +68,7 @@ void bn_muln_low(dig_t *c, const dig_t *a, const dig_t *b, size_t size) {
 }
 
 void bn_muld_low(dig_t *c, const dig_t *a, size_t sa, const dig_t *b, size_t sb,
-		uint_t low, uint_t high) {
+		relic_uint_t low, relic_uint_t high) {
 	(void)low;
 	(void)high;
 	mpn_mul(c, a, sa, b, sb);

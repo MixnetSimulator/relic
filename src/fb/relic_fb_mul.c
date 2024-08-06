@@ -68,7 +68,7 @@ static void fb_mul_basic_imp(dig_t *c, const dig_t *a, const dig_t *b,
 		if (a[0] & 1) {
 			dv_copy(c, b, size);
 		}
-		for (uint_t i = 1; i <= (RLC_DIG * size) - 1; i++) {
+		for (relic_uint_t i = 1; i <= (RLC_DIG * size) - 1; i++) {
 			fb_lsh1_low(s, s);
 			fb_rdc(s, s);
 			if (fb_get_bit(a, i)) {
@@ -97,7 +97,7 @@ static void fb_mul_basic_imp(dig_t *c, const dig_t *a, const dig_t *b,
  * @param[in] level			- the number of Karatsuba steps to apply.
  */
 static void fb_mul_karat_imp(dv_t c, const fb_t a, const fb_t b, size_t size,
-		uint_t level) {
+		relic_uint_t level) {
 	int i, h, h1;
 	dv_t a1, b1, ab;
 	dig_t *a0b0, *a1b1;

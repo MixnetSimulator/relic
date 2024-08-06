@@ -63,7 +63,7 @@ static int memory(void) {
 }
 
 static int util(void) {
-	uint_t bits;
+	relic_uint_t bits;
 	int code = RLC_ERR;
 	char str[RLC_BN_BITS + 2];
 	dig_t digit, raw[RLC_BN_DIGS];

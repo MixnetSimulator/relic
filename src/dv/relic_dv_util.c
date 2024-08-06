@@ -116,7 +116,7 @@ int dv_cmp_sec(const dig_t *a, const dig_t *b, size_t size) {
 	return (r == 0 ? RLC_EQ : RLC_NE);
 }
 
-void dv_rshd(dig_t *c, const dig_t *a, size_t size, uint_t digits) {
+void dv_rshd(dig_t *c, const dig_t *a, size_t size, relic_uint_t digits) {
 	const dig_t *top;
 	dig_t *bot;
 	size_t i;
@@ -132,7 +132,7 @@ void dv_rshd(dig_t *c, const dig_t *a, size_t size, uint_t digits) {
 	}
 }
 
-void dv_lshd(dig_t *c, const dig_t *a, size_t size, uint_t digits) {
+void dv_lshd(dig_t *c, const dig_t *a, size_t size, relic_uint_t digits) {
 	dig_t *top;
 	const dig_t *bot;
 	size_t i;

@@ -160,7 +160,7 @@ dig_t bn_lsh1_low(dig_t *c, const dig_t *a, size_t size);
  * @param[in] bits			- the shift amount.
  * @return the carry of the last digit shift.
  */
-dig_t bn_lshb_low(dig_t *c, const dig_t *a, size_t size, uint_t bits);
+dig_t bn_lshb_low(dig_t *c, const dig_t *a, size_t size, relic_uint_t bits);
 
 /**
  * Shifts a digit vector to the right by 1 bit. Computes c = a >> 1.
@@ -182,7 +182,7 @@ dig_t bn_rsh1_low(dig_t *c, const dig_t *a, size_t size);
  * @param[in] bits			- the shift amount.
  * @return the carry of the last digit shift.
  */
-dig_t bn_rshb_low(dig_t *c, const dig_t *a, size_t size, uint_t bits);
+dig_t bn_rshb_low(dig_t *c, const dig_t *a, size_t size, relic_uint_t bits);
 
 /**
  * Shifts a signed digit vector to the right by an amount smaller than a digit.
@@ -194,7 +194,7 @@ dig_t bn_rshb_low(dig_t *c, const dig_t *a, size_t size, uint_t bits);
  * @param[in] bits			- the shift amount.
  * @return the carry of the last digit shift.
  */
-dig_t bn_rshs_low(dig_t *c, const dig_t *a, size_t size, uint_t bits);
+dig_t bn_rshs_low(dig_t *c, const dig_t *a, size_t size, relic_uint_t bits);
 
 /**
  * Multiplies a digit vector by a digit and adds this result to another digit
@@ -257,7 +257,7 @@ void bn_muln_low(dig_t *c, const dig_t *a, const dig_t *b, size_t size);
  * @param[in] high			- the last digit to compute.
  */
 void bn_muld_low(dig_t *c, const dig_t *a, size_t sa, const dig_t *b, size_t sb,
-		uint_t low, uint_t high);
+		relic_uint_t low, relic_uint_t high);
 
 /**
  * Squares a digit vector and adds this result to another digit vector.

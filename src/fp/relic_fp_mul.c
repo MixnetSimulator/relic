@@ -49,7 +49,7 @@
  * @param[in] level			- the number of Karatsuba steps to apply.
  */
 static void fp_mul_karat_imp(dv_t c, const fp_t a, const fp_t b, size_t size,
-		uint_t level) {
+		relic_uint_t level) {
 	/* Compute half the digits of a or b. */
 	int h = size >> 1;
 	int h1 = size - h;

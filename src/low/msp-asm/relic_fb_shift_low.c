@@ -62,7 +62,7 @@ dig_t fb_lsh1_low(dig_t *c, const dig_t *a) {
 	return carry;
 }
 
-dig_t fb_lshb_low(dig_t *c, const dig_t *a, uint_t bits) {
+dig_t fb_lshb_low(dig_t *c, const dig_t *a, relic_uint_t bits) {
 	int i;
 	dig_t r, carry, mask, shift;
 
@@ -100,7 +100,7 @@ dig_t fb_rsh1_low(dig_t *c, const dig_t *a) {
 	return carry;
 }
 
-dig_t fb_rshb_low(dig_t *c, const dig_t *a, uint_t bits) {
+dig_t fb_rshb_low(dig_t *c, const dig_t *a, relic_uint_t bits) {
 	int i;
 	dig_t r, carry, mask, shift;
 
@@ -121,7 +121,7 @@ dig_t fb_rshb_low(dig_t *c, const dig_t *a, uint_t bits) {
 	return carry;
 }
 
-dig_t fb_lsha_low(dig_t *c, const dig_t *a, uint_t bits, size_t size) {
+dig_t fb_lsha_low(dig_t *c, const dig_t *a, relic_uint_t bits, size_t size) {
 	int i, j;
 	dig_t b1, b2;
 
